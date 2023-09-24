@@ -21,9 +21,9 @@ resource "aws_s3_bucket" "asset-app-bucket" {
 }
 
 resource "aws_s3_bucket_acl" "asset-app-bucket" {
-    bucket = aws_s3_bucket.asset-app-bucket.id
-    acl    = "public-read"
-    depends_on = [aws_s3_bucket_ownership_controls.s3_bucket_acl_ownership]
+  bucket     = aws_s3_bucket.asset-app-bucket.id
+  acl        = "public-read"
+  depends_on = [aws_s3_bucket_ownership_controls.s3_bucket_acl_ownership]
 }
 
 resource "aws_s3_bucket_ownership_controls" "s3_bucket_acl_ownership" {
