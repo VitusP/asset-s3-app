@@ -61,5 +61,5 @@ resource "aws_s3_object" "asset-app-bucket" {
   bucket       = aws_s3_bucket.asset-app-bucket.id
   content      = file("../assets/index.html")
   content_type = "text/html"
-  depends_on = [aws_s3_bucket_acl.asset-app-bucket]
+  depends_on   = [aws_s3_bucket_acl.asset-app-bucket]
 }
